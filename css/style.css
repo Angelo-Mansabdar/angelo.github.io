@@ -87,6 +87,12 @@ nav > a:hover::after {
     width: 100%;
 }
 
+nav:hover > a:not(:hover) {
+    filter: blur(0.7px);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
 
 .container{
     width: 85vw;
