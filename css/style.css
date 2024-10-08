@@ -186,10 +186,18 @@ div img {
     align-items: center;
 }
 
+#jump-about .container-65 p{
+    padding-right: 5vw;
+}
+.container-35 img{
+    filter: drop-shadow(2px 2px 4px #fff);
+    object-fit: contain;
+    height: 60vh;
+}
+
 .button-main{
     font-size: 18px;
     font-weight: 600;
-
     height: 5vh;
     width: 10vw;
     border-radius: 5px;
@@ -204,14 +212,11 @@ div img {
     font-size: 28px;
 }
 
-.paragraph-main{
-
-}
 
 .container-35{
     width: 35vw;
 }
 
 .container-65{
-    width: 65vw;
+    width: 55vw;
 }
