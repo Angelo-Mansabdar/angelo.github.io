@@ -3,8 +3,6 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 html {
@@ -30,6 +28,15 @@ textarea,
 select {
     font: inherit;
 }
+
+h1,
+h2,
+h3,
+p,
+button{
+    color: #fff;
+}
+
 
 a {
     text-decoration: none;
@@ -93,13 +100,17 @@ nav:hover > a:not(:hover) {
     transition: all 0.3s ease;
 }
 
+div img {
+    height: 100%;
+    width: 100%;
+}
 
 .container{
-    width: 85vw;
-    height: 85vh;
-    margin-left: 7vw;
-    margin-right: 7vw;
+    width: 75vw;
+    margin-left: 12.5vw;
+    margin-right: 12.5vw;
     background-color: #222;
+    margin-bottom: 15vh;
 }
 
 .typewrite > .wrap {
@@ -116,6 +127,7 @@ nav:hover > a:not(:hover) {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 15vh;
 }
 
 .banner-horizontal > img {
@@ -164,4 +176,42 @@ nav:hover > a:not(:hover) {
     50% {
         border-color: transparent; 
     }
+}
+
+/* Begin of website -- about section --  */
+
+#jump-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-main{
+    font-size: 18px;
+    font-weight: 600;
+
+    height: 5vh;
+    width: 10vw;
+    border-radius: 5px;
+    background-color: #464646;
+}
+
+.button-main:hover{
+
+}
+
+.header-main{
+    font-size: 28px;
+}
+
+.paragraph-main{
+
+}
+
+.container-35{
+    width: 35vw;
+}
+
+.container-65{
+    width: 65vw;
 }
