@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 1.1rem;
     line-height: 1.5;
     scroll-behavior: smooth;
 }
@@ -147,6 +147,10 @@ p strong:hover{
     width: 25vw;
 }
 
+.container-100{
+    width: 100vw;
+}
+
 .typewrite > .wrap {
     border-right: 0.08em solid #fff;
     animation: blink-cursor 0.75s step-end infinite;
@@ -231,7 +235,6 @@ p strong:hover{
 }
 
 .button-main{
-    font-size: 18px;
     font-weight: 500;
     height: 5vh;
     width: 10vw;
@@ -240,7 +243,7 @@ p strong:hover{
     border-width: 1px;
     border-color: #464646;
     background-color: #464646;
-    transition: 0.6s ease;
+    transition: 0.4s ease;
 }
 
 .button-main:hover{
@@ -250,13 +253,120 @@ p strong:hover{
 }
 
 .header-main{
-    font-size: 28px;
+    font-size: 1.8rem;
 }
 
 .container-65 h1{
     text-decoration: underline;
 }
 
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner{
+    background-color: red;
+}
 
 
+/* 
+    Media query's 
+    360px is the min width it needs to be responsive
+*/
+
+@media (width <= 1350px) {
+    html{
+        font-size: 1rem;
+
+        a{
+            font-size: 0.9rem;
+        }
+
+        a span{
+            font-size: 2rem;
+        }
+    }
+
+    nav a{
+        font-size: 1.2rem;
+        margin-right: 25px;
+    }
+
+    .container,
+    .container-65,
+    .container-100,
+    .container-25,
+    .container-35,
+    .container-50,
+    .container-75{
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 75vw;
+    }
+
+    #jump-about{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .container img{
+        height: 60vh;
+    }
+
+
+    
+}
+
+@media (width <= 760px) {
+
+    .container-65 button{
+        width: 20vw;
+    }
+
+    #jump-about{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    nav a{
+        font-size: 1.0rem;
+        margin-right: 10px;
+    }
+    nav{
+        padding: 0;
+        margin: 0;
+    };
+
+}
+
+@media (width <= 680px) {
+
+    nav{
+        
+    };
+    
+}
+
+@media (width <= 400px) {
+
+    .container{
+        margin-right: 8vw;
+        margin-left: 8vw;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    h1{
+        margin-top: -50px;
+    }
+    
+}
 
