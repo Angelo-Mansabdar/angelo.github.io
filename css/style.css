@@ -352,15 +352,74 @@ p strong:hover{
 
 }
 
-@media (width <= 680px) {
+/* Mobile-specific styles */
+@media (max-width: 680px) {
+    header {
+        display: flex;
+        justify-content: space-between; /* Space out hamburger and logo */
+        padding: 10px 20px;
+    }
 
-    nav{
+    /* Hide the navigation links initially */
+    nav {
         display: none;
-    };
-    
+        flex-direction: column;
+        position: absolute;
+        top: 50px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background-color: rgba(34, 34, 34, 0.95); /* Opaque background */
+        z-index: 100;
+    }
+
+    nav.active {
+        display: flex; /* Show nav when active */
+    }
+
+    nav a {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #464646;
+    }
+
+    /* Hamburger menu styles */
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        background-color: #fff;
+        height: 4px;
+        width: 100%;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    /* Animate hamburger to 'X' shape when active */
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translateY(10px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translateY(-10px);
+    }
 }
 
+
+
 @media (width <= 400px) {
+
+    body{
+        overflow-x: hidden;
+    }
 
     .container { 
         margin-left: 0;
@@ -368,25 +427,25 @@ p strong:hover{
         margin-top: 0;
         margin-bottom: 0;
         display: flex;
-        flex-direction: column;  /* Stack items in a column */
-        justify-content: center;  /* Center items vertically */
-        align-items: center;  /* Center items horizontally */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100vw;
-        overflow-x: hidden;  /* Prevent horizontal overflow */
+        overflow-x: hidden;
         text-align: center;
     }
 
     .container img {
-        width: auto;  /* Make the image auto-resize to fit */
-        max-width: 90%;  /* Limit the image width to prevent overflow */
-        height: auto;  /* Maintain aspect ratio */
-        display: block;  /* Ensure proper centering */
-        margin: 0 auto;  /* Center the image horizontally */
-        margin-bottom: 20px;  /* Add space below the image */
+        width: auto;
+        max-width: 90%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
     }
 
     .button-main {
-        width: 80% !important ;  /* Make buttons take up more width on smaller screens */
+        width: 80% !important ;
         text-align: center;
     }
 
