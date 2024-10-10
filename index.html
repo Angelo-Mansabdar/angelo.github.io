@@ -1,75 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Angelo | Web Developer</title>
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
-  </head>
-  <body>
+</head>
+<body>
 
-    <header>
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
+<header>
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav id="nav-menu">
+        <a href="#jump-hero">Home</a>
+        <a href="#jump-about">About</a>
+        <a href="#jump-skills">Skills</a>
+        <a href="#jump-portfolio">Portfolio</a>
+        <a href="#jump-goals">Goals</a>
+        <a href="#jump-contact">Contact</a>
+        <a href="https://github.com/Angelo-Mansabdar" target="_blank">GitHub</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero-banner" id="jump-hero">
+        <div class="banner-horizontal">
+            <img src="assets/img/banner-grey-wash.jpg" alt="Banner image">
         </div>
-        <nav id="nav-menu">
-            <a href="#jump-hero">Home</a>
-            <a href="#jump-about">About</a>
-            <a href="#jump-skills">Skills</a>
-            <a href="#jump-portfolio">Portfolio</a>
-            <a href="#jump-goals">Goals</a>
-            <a href="#jump-contact">Contact</a>
-            <a href="https://github.com/Angelo-Mansabdar" target="_blank">GitHub</a>
-        </nav>
-    </header>
     
-
-    <main>
-
-        <section class="hero-banner" id="jump-hero">
-            <div class="banner-horizontal">
-                <img src="assets/img/banner-grey-wash.jpg" alt="Banner image">
-            </div>
-    
-            <div class="type-writer">
-                <h3>
-                <a href="" class="typewrite" data-period="2000" data-type='[ "My name is Angelo.","I am a web developer.", "I am creative.", "I love programming.", "Passion for programming.", "Natural problem solver.", "Cat person.", "Logical thinker.", "Occasional book reader." ]'>
+        <div class="type-writer">
+            <h3>
+                <a href="" class="typewrite" data-period="2000" 
+                   data-type='[ "My name is Angelo.", "I am a web developer.", "I am creative.", "I love programming.", "Passion for programming.", "Natural problem solver.", "Cat person.", "Logical thinker.", "Occasional book reader." ]'>
                     <span class="wrap"></span>
                 </a>
-                </h3>   
-            </div>
+            </h3>
+        </div>
+    
+        <div class="scroll-down">
+            <a href="#jump-about"><img src="assets/img/arrow-down.svg" alt="arrow down"></a>
+        </div>
+    </section>
+    
+    
+    <section class="container" id="jump-about">
+        <div class="container-65">
+            <h1 class="header-main">About me</h1>
+            <p>
+                Hi, I’m Angelo Mansabdar,<br>
+                a 21-year-old second-year software development student at ROC Nijmegen, passionate about both front-end and back-end web development. My favorite and most used languages are <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>PHP</strong>, and I have basic proficiency in <strong>Java OOP</strong> and <strong>Python</strong>, giving me the flexibility to tackle diverse projects. Web development is where I shine, and I’m always eager to refine my skills.<br><br>
+                I’m constantly working on becoming a self-sufficient developer with a broad and specialized skill set, aiming to find a fun and engaging role in the future where I can continue to grow. I value positivity and improvement in my work, focusing more on growth than perfectionism. Outside of coding, I enjoy playing games, reading, and skateboarding, which helps fuel my creativity and keep a balanced perspective.<br><br>
+                <strong>Curious about my work?</strong><br>
+            </p>
+            <button class="button-main"><a href="#jump-portfolio">My work</a></button>
+        </div>
+        <div class="container-35">
+            <img src="assets/img/foto-angelo.jpg" alt="Photo-of-me">
+        </div>
+    </section>
 
-            <div class="scroll-down">
-                <a href="#jump-about"><img src="assets/img/arrow-down.svg" alt="arrow down"></a>
-            </div>
-        </section>
+</main>
 
-        <section class="container" id="jump-about">
-            <div class="container-65">
-                <h1 class="header-main">About me</h1>
-                    <p>
-                        Hi, I’m Angelo Mansabdar,<br>
-                        a 21-year-old second-year software development student at ROC Nijmegen, passionate about both front-end and back-end web development. My favorite and most used languages are <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>PHP</strong>, and I have basic proficiency in <strong>Java OOP</strong> and <strong>Python</strong>, giving me the flexibility to tackle diverse projects. Web development is where I shine, and I’m always eager to refine my skills.<br><br>
-                        I’m constantly working on becoming a self-sufficient developer with a broad and specialized skill set, aiming to find a fun and engaging role in the future where I can continue to grow. I value positivity and improvement in my work, focusing more on growth than perfectionism. Outside of coding, I enjoy playing games, reading, and skateboarding, which helps fuel my creativity and keep a balanced perspective.<br><br>
-                        <strong>Curious about my work?</strong><br>
-                    </p>
-                <button class="button-main"><a href="#jump-portfolio">My work</a></button>
-            </div>
-            <div class="container-35">
-                <img src="assets/img/foto-angelo.jpg" alt="Photo-of-me">
-            </div>
-        </section>
+<footer></footer>
 
-    </main>
-
-
-
-    <footer></footer>
-
-  </body>
-  <script src="js/script.js"></script>
-  <script src="js/nav.js"></script>
+<script src="js/typewriter.js"></script>
+<script src="js/nav.js"></script>
+</body>
 </html>

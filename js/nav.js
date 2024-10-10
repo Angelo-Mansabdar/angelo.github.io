@@ -1,6 +1,6 @@
 window.onload = function() {
     const navLinks = document.querySelectorAll('nav > a'); // All navigation links
-    const sections = document.querySelectorAll('main > section[id]'); // Updated to select all sections with an ID
+    const sections = document.querySelectorAll('main > section[id]'); // Select all sections with an ID
     const hamburger = document.getElementById('hamburger'); // Hamburger menu button
     const navMenu = document.getElementById('nav-menu'); // Mobile navigation menu
     const scrollDown = document.querySelector('.scroll-down a'); // Scroll down button
@@ -12,6 +12,13 @@ window.onload = function() {
         threshold: 0.2, // Trigger when 20% of a section is visible
         rootMargin: '-50px' // Offset for sticky header, adjust as needed
     };
+
+    // Set "Home" as the active link on page load
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === '#jump-hero') {
+            link.classList.add('active');
+        }
+    });
 
     // Function to remove active class from all navigation links
     function removeActiveClasses() {
