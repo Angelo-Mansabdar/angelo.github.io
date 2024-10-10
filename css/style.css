@@ -353,27 +353,35 @@ p strong:hover{
 
 }
 
-/* Mobile-specific styles */
 @media (max-width: 680px) {
     header {
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
         padding: 10px 20px;
     }
 
+    /* Navigation menu styles */
     nav {
-        display: none;
+        display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 50px;
+        position: fixed;
         left: 0;
+        top: 0;
         width: 100%;
+        height: 85vh;
         background-color: rgba(34, 34, 34, 0.95);
-        z-index: 100;
+        z-index: 99;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; /* Initially hidden */
+        transform: translateY(-100%); /* Slide up initially */
+        transition: opacity 0.4s ease, transform 0.4s ease; /* 0.4s transition */
     }
 
+    /* When menu is active, make it visible and slide it down */
     nav.active {
-        display: flex;
+        opacity: 1; /* Visible */
+        transform: translateY(0); /* Slide down to visible */
     }
 
     nav a {
@@ -389,6 +397,10 @@ p strong:hover{
         height: 30px;
         position: relative;
         cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 100;
     }
 
     .hamburger div {
@@ -396,9 +408,10 @@ p strong:hover{
         height: 4px;
         width: 100%;
         margin: 5px 0;
-        transition: 0.4s;
+        transition: transform 0.4s, opacity 0.4s; /* Transition for hamburger lines */
     }
 
+    /* Transform hamburger to X when active */
     .hamburger.active div:nth-child(1) {
         transform: rotate(45deg) translateY(10px);
     }
@@ -414,6 +427,7 @@ p strong:hover{
 
 
 
+
 @media (width <= 400px) {
 
     body{
@@ -421,31 +435,31 @@ p strong:hover{
     }
 
     .container { 
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-        margin-bottom: 0;
+        align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        width: 100vw;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
         overflow-x: hidden;
         text-align: center;
+        width: 100vw;
     }
 
     .container img {
-        width: auto;
-        max-width: 90%;
-        height: auto;
         display: block;
-        margin: 0 auto;
+        height: auto;
         margin-bottom: 20px;
+        margin: 0 auto;
+        max-width: 90%;
+        width: auto;
     }
 
     .button-main {
-        width: 80% !important ;
         text-align: center;
+        width: 80% !important ;
     }
 
 }
