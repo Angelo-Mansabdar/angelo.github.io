@@ -5,7 +5,7 @@ window.onload = function() {
     const navMenu = document.getElementById('nav-menu'); // Mobile navigation menu
     const scrollDown = document.querySelector('.scroll-down a'); // Scroll down button
     const aboutLink = document.querySelector('nav > a[href="#jump-about"]'); // "About" link
-    
+
     // Options for the IntersectionObserver
     const options = {
         root: null, // Viewport as root
@@ -51,9 +51,16 @@ window.onload = function() {
     // Event listener for clicking on navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default anchor behavior for smooth scrolling
+            const targetHref = this.getAttribute('href');
 
-            const targetId = this.getAttribute('href').substring(1); // Get the section id from href
+            // Exclude GitHub link from preventDefault
+            if (targetHref.includes('github.com')) {
+                return; // Let GitHub link behave normally
+            }
+
+            event.preventDefault(); // Prevent default anchor behavior for smooth scrolling for internal links
+
+            const targetId = targetHref.substring(1); // Get the section id from href
             const targetSection = document.getElementById(targetId);
 
             if (targetSection) {
