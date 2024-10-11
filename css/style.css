@@ -433,7 +433,7 @@ p strong:hover {
     margin-top: 0;
     overflow-x: hidden;
     text-align: center;
-    width: 100vw;
+    width: 90%;
   }
 
   .container img {
